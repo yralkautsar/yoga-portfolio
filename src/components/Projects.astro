@@ -3,36 +3,36 @@ const projects = [
   {
     num: "01",
     title: "WhatsApp-First Business Site",
-    desc: "Conversion-focused landing page for Indonesian SMBs. Product catalog with auto-filled WA order messages, Google-optimized local SEO, and mobile-first design.",
-    tags: ["Astro", "Tailwind", "WhatsApp API", "SEO"],
-    url: "#",
-    status: "Coming Soon",
+    desc: "Conversion-focused landing page untuk UMKM Indonesia. Catalog produk dengan WA order integration, bilingual ID+EN, dan mobile-first design. Tersedia demo untuk bisnis makanan dan fashion.",
+    tags: ["Astro", "Tailwind", "WhatsApp API", "Bilingual"],
+    url: "https://demo-wa-business-yogarizky.vercel.app",
+    status: "Live",
     featured: true
   },
   {
     num: "02",
     title: "Cafe Landing Page",
-    desc: "Clean, modern landing page for cafés — menu showcase, atmosphere, and location with strong mobile performance.",
+    desc: "Landing page modern untuk kafe — menu showcase, suasana, galeri foto, dan lokasi dengan performa mobile yang kuat.",
     tags: ["Astro", "Tailwind", "Mobile-First"],
-    url: "https://personal-portofolio-yoga.vercel.app/projects/cafe-landing",
+    url: "https://demo-cafe-yogarizky.vercel.app",
     status: "Live",
     featured: false
   },
   {
     num: "03",
     title: "Product Catalog Site",
-    desc: "Lightweight catalog with pricing display and clean layout for small businesses needing a simple online storefront.",
-    tags: ["Astro", "Tailwind", "E-Commerce"],
-    url: "https://personal-portofolio-yoga.vercel.app/projects/catalog-site",
+    desc: "Catalog produk ringan dengan tampilan harga, filter kategori, dan WA order integration untuk toko online sederhana.",
+    tags: ["Astro", "Tailwind", "WhatsApp API"],
+    url: "https://demo-catalog-yogarizky.vercel.app",
     status: "Live",
     featured: false
   },
   {
     num: "04",
     title: "Wedding Invitation",
-    desc: "Elegant online wedding invitation with gallery, countdown timer, event details, and digital gift support.",
-    tags: ["Astro", "Tailwind", "Animation"],
-    url: "https://personal-portofolio-yoga.vercel.app/projects/wedding-invitation",
+    desc: "Undangan pernikahan online elegan dengan countdown timer, galeri foto, RSVP via WhatsApp, amplop digital, dan buku tamu.",
+    tags: ["Astro", "Tailwind", "Animation", "WhatsApp API"],
+    url: "https://demo-wedding-yogarizky.vercel.app",
     status: "Live",
     featured: false
   }
@@ -47,7 +47,7 @@ const projects = [
 
   <div class="projects-list">
     {projects.map((p, i) => (
-      <a href={p.url} target={p.url !== "#" ? "_blank" : "_self"} class={`project-row reveal ${p.featured ? "featured" : ""}`} rel="noopener">
+      <a href={p.url} target="_blank" class={`project-row reveal ${p.featured ? "featured" : ""}`} rel="noopener">
         <span class="proj-num">{p.num}</span>
         <div class="proj-main">
           <h3 class="proj-title">{p.title}</h3>

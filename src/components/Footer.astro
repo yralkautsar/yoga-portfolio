@@ -1,0 +1,42 @@
+---
+---
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2025 Yoga Rizky Alkautsar</span>
+    <a href="/" class="footer-logo">YR<span>.</span></a>
+    <span class="footer-built">Built with Astro · Tailwind CSS</span>
+  </div>
+</footer>
+
+<style>
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-copy, .footer-built {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--ink-faint);
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--ink);
+  text-decoration: none;
+}
+.footer-logo span { color: var(--accent-red); }
+
+@media (max-width: 768px) {
+  .footer-inner { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>

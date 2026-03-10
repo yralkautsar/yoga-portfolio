@@ -1,0 +1,164 @@
+---
+const experiences = [
+  {
+    period: "Sep 2020 — Present",
+    company: "ICS Travel Group",
+    location: "Bali, Indonesia",
+    title: "IT Support Supervisor",
+    desc: "Overseeing full IT operations for the Bali office while supporting other company locations remotely. Responsible for system stability, infrastructure improvements, vendor coordination, and supervising junior IT staff.",
+    highlights: [
+      { text: "Upgraded network bandwidth from 100 Mbps → 300 Mbps, improving daily operations and peak-hour responsiveness.", featured: true },
+      { text: "Deployed GLPI for centralized IT asset management, achieving ~90% device coverage company-wide.", featured: true },
+      { text: "Redesigned office Wi-Fi into a seamless roaming environment, eliminating connection drop-offs.", featured: false },
+      { text: "Built Ubuntu Server environment with Docker-based containerized services for internal tools.", featured: false },
+      { text: "Supervised and mentored junior IT staff; standardized support processes and issue handling.", featured: false },
+      { text: "Managed Windows Server & Google Workspace : access control, account lifecycle, policy enforcement.", featured: false },
+    ]
+  },
+  {
+    period: "Feb 2018 — Feb 2019",
+    company: "PT Centrin Online Prima",
+    location: "Bali, Indonesia",
+    title: "Engineering On Side",
+    desc: "Day-to-day IT support for internal users. Maintained system availability, resolved hardware/software/network issues, and contributed to internal documentation.",
+    highlights: [
+      { text: "Delivered technical support for hardware, software, and network-related issues across office environments.", featured: false },
+      { text: "Supported Windows-based systems including basic access management and routine system maintenance.", featured: false },
+      { text: "Documented recurring issues and solutions, improving response consistency and resolution speed.", featured: false },
+    ]
+  }
+]
+---
+<section id="experience">
+  <div class="section-header reveal">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">Experience</h2>
+    <div class="sec-line"></div>
+  </div>
+
+  {experiences.map((exp, i) => (
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <p class="exp-period">{exp.period}</p>
+        <p class="exp-company">{exp.company}</p>
+        <p class="exp-location">{exp.location}</p>
+      </div>
+      <div class="exp-body">
+        <h3 class="exp-title">{exp.title}</h3>
+        <p class="exp-desc">{exp.desc}</p>
+        <ul class="exp-list">
+          {exp.highlights.map(h => (
+            <li class={h.featured ? "featured" : ""}>{h.text}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</section>
+
+<style>
+#experience {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 56px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+.sec-num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--accent-red); }
+.sec-title { font-family: var(--font-display); font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -0.02em; }
+.sec-line { flex: 1; height: 1px; background: var(--border); }
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 64px;
+}
+
+.exp-meta { padding-top: 4px; }
+
+.exp-period {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
+  margin-bottom: 10px;
+}
+
+.exp-company {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.exp-location {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+}
+
+.exp-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.exp-desc {
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.exp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.exp-list li {
+  font-size: 13px;
+  color: var(--ink-dim);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.exp-list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+}
+
+.exp-list li.featured {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.exp-list li.featured::before {
+  content: '→';
+  color: var(--accent-red);
+}
+
+@media (max-width: 900px) {
+  #experience { padding: 80px 24px; }
+  .exp-item { grid-template-columns: 1fr; gap: 20px; }
+}
+</style>

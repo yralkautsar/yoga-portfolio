@@ -1,0 +1,145 @@
+---
+---
+<section id="about">
+  <div class="section-header reveal">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">About</h2>
+    <div class="sec-line"></div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>
+        I'm an <strong>IT Support Supervisor</strong> based in Bali, Indonesia, with over five years of hands-on experience managing enterprise-level IT infrastructure at ICS Travel Group.
+      </p>
+      <p>
+        My work spans network architecture, server administration, team leadership, and vendor coordination. Keeping systems stable for a distributed, multi-location travel company.
+      </p>
+      <blockquote>
+        I build websites the same way I build infrastructure. With performance, reliability, and the real user in mind.
+      </blockquote>
+      <p>
+        Currently seeking <strong>freelance web projects</strong>, particularly for small businesses and local brands that need a professional online presence without the enterprise price tag.
+      </p>
+    </div>
+
+    <div class="about-aside reveal">
+      <div class="aside-block">
+        <span class="mono-label">Education</span>
+        <p class="aside-val">Diploma in Information Engineering</p>
+        <p class="aside-sub">NewMedia College · Sep 2016</p>
+      </div>
+      <div class="aside-block">
+        <span class="mono-label">Location</span>
+        <p class="aside-val">Bali, Indonesia</p>
+      </div>
+      <div class="aside-block">
+        <span class="mono-label">Languages</span>
+        <p class="aside-val">Bahasa Indonesia (native)</p>
+        <p class="aside-val">English (conversational)</p>
+      </div>
+      <div class="aside-block">
+        <span class="mono-label">Looking for</span>
+        <p class="aside-val">Freelance web work, collaborations, part-time dev roles</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+#about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 56px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+.sec-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--accent-red);
+}
+.sec-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+.sec-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: var(--ink-mid);
+  line-height: 1.85;
+  margin-bottom: 22px;
+}
+.about-text p strong { color: var(--ink); font-weight: 500; }
+
+blockquote {
+  border-left: 3px solid var(--ink);
+  padding: 0 0 0 24px;
+  margin: 36px 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.about-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.aside-block {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+.aside-block:first-child { padding-top: 0; }
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.aside-val {
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.5;
+}
+.aside-sub {
+  font-size: 12px;
+  color: var(--ink-dim);
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  #about { padding: 80px 24px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+</style>

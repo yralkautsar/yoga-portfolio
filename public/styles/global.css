@@ -1,0 +1,44 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #fafaf8;
+  --bg-warm: #f5f4f0;
+  --surface: #ffffff;
+  --border: #e8e6e0;
+  --border-dark: #d0cdc5;
+  --ink: #0f0f0e;
+  --ink-mid: #3a3935;
+  --ink-dim: #8a8880;
+  --ink-faint: #c5c3bc;
+  --accent: #1a1a18;
+  --accent-red: #d63b2f;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Epilogue', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-dark); }
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

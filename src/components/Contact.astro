@@ -1,0 +1,309 @@
+---
+const services = [
+  "Business landing pages & websites",
+  "WhatsApp-integrated product catalogs",
+  "IT infrastructure consultation",
+  "Google Workspace setup & admin",
+  "Network planning & optimization",
+  "Internal system documentation",
+];
+---
+
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <div class="section-header">
+        <span class="sec-num">05</span>
+        <h2 class="sec-title">Contact</h2>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="contact-intro">
+        <div class="contact-photo">
+          <img src="/images/profile.jpg" alt="Yoga Rizky Alkautsar" />
+        </div>
+        <div>
+          <h3 class="contact-headline">
+            Let's build<br />
+            something <em>great.</em>
+          </h3>
+        </div>
+      </div>
+
+      <p class="contact-sub">
+        Looking for a developer who understands both the technical side and the
+        business side? Let's talk about your project.
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:yogaralkautsar@gmail.com" class="contact-link">
+          <div class="cl-label">
+            <span class="cl-icon">✉</span>
+            <div>
+              <span class="cl-title">Email</span>
+              <span class="cl-sub">yogaralkautsar@gmail.com</span>
+            </div>
+          </div>
+          <span class="cl-arrow">→</span>
+        </a>
+        <a
+          href="https://wa.me/6285739497338"
+          target="_blank"
+          rel="noopener"
+          class="contact-link"
+        >
+          <div class="cl-label">
+            <span class="cl-icon">💬</span>
+            <div>
+              <span class="cl-title">WhatsApp</span>
+              <span class="cl-sub">+62 857 3949 7338</span>
+            </div>
+          </div>
+          <span class="cl-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-right reveal">
+      <div class="avail-badge">
+        <span class="avail-dot"></span>
+        <span>Available for freelance work</span>
+      </div>
+
+      <p class="services-label">What I can help with</p>
+      <ul class="services-list">
+        {services.map((s) => <li>{s}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  #contact {
+    border-top: 1px solid var(--border);
+    background: var(--bg-warm);
+  }
+
+  .contact-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 56px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 100px;
+    align-items: start;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .sec-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--accent-red);
+  }
+  .sec-title {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+  .sec-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border-dark);
+  }
+
+  /* Photo + headline row */
+  .contact-intro {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .contact-photo {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--border-dark);
+    flex-shrink: 0;
+  }
+
+  .contact-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: grayscale(10%);
+    transition: filter 0.3s ease;
+  }
+
+  .contact-photo:hover img {
+    filter: grayscale(0%);
+  }
+
+  .contact-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    color: var(--ink);
+  }
+  .contact-headline em {
+    font-style: italic;
+    color: var(--accent-red);
+  }
+
+  .contact-sub {
+    font-size: 15px;
+    color: var(--ink-dim);
+    line-height: 1.7;
+    max-width: 420px;
+    margin-bottom: 40px;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--ink);
+    transition: all 0.2s;
+  }
+  .contact-link:hover {
+    border-color: var(--ink);
+    background: var(--ink);
+    color: var(--bg);
+  }
+  .contact-link:hover .cl-sub {
+    color: var(--ink-faint);
+  }
+  .contact-link:hover .cl-arrow {
+    transform: translateX(4px);
+  }
+
+  .cl-label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .cl-icon {
+    font-size: 20px;
+  }
+  .cl-title {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .cl-sub {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--ink-dim);
+    transition: color 0.2s;
+  }
+  .cl-arrow {
+    font-size: 18px;
+    color: var(--ink-dim);
+    transition:
+      transform 0.2s,
+      color 0.2s;
+  }
+
+  /* Right */
+  .contact-right {
+    padding-top: 120px;
+  }
+
+  .avail-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #bbf7d0;
+    background: #f0fdf4;
+    padding: 8px 16px;
+    margin-bottom: 32px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #16a34a;
+  }
+
+  .avail-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+
+  .services-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 16px;
+  }
+
+  .services-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services-list li {
+    font-size: 14px;
+    color: var(--ink-mid);
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .services-list li::before {
+    content: "✦";
+    font-size: 8px;
+    color: var(--accent-red);
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      padding: 80px 24px;
+      gap: 48px;
+    }
+    .contact-right {
+      padding-top: 0;
+    }
+  }
+</style>
